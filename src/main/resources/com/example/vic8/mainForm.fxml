@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vic8.controllers.TabController">
+   <center>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab onSelectionChanged="#onWorkShopTabClick" text="Цех">
+               <content>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                     <center>
+                        <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <center>
+                              <TableView fx:id="workshopTable" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                <columns>
+                                  <TableColumn id="workshopIdColumn" fx:id="workshopIdColumn" prefWidth="75.0" text="№ цеха" />
+                                  <TableColumn id="workshopNameColumn" fx:id="workshopNameColumn" prefWidth="75.0" text="Название" />
+                                    <TableColumn id="workshopChiefColumn" fx:id="workshopChiefColumn" prefWidth="75.0" text="Начальник" />
+                                    <TableColumn id="workshopPhoneColumn" fx:id="workshopPhoneColumn" prefWidth="75.0" text="Телефон" />
+                                </columns>
+                              </TableView>
+                           </center>
+                           <bottom>
+                              <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                <buttons>
+                                  <Button fx:id="btn1" mnemonicParsing="false" text="Добавить" onAction="#onAddClick" />
+                                    <Button fx:id="btn2" layoutX="537.0" layoutY="17.0" mnemonicParsing="false" onAction="#onUpdateClick" text="Изменить" />
+                                    <Button fx:id="btn3" layoutX="537.0" layoutY="17.0" mnemonicParsing="false" onAction="#onDeleteClick" text="Удалить" />
+                                </buttons>
+                              </ButtonBar>
+                           </bottom>
+                        </BorderPane>
+                     </center>
+                  </BorderPane>
+               </content>
+          </Tab>
+            <Tab onSelectionChanged="#onProductTabClick" text="Продукция">
+               <content>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                     <center>
+                        <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <center>
+                              <TableView fx:id="productTable" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                 <columns>
+                                    <TableColumn fx:id="productCodeColumn" prefWidth="75.0" text="Код" />
+                                    <TableColumn fx:id="productNameColumn" prefWidth="75.0" text="Название" />
+                                    <TableColumn fx:id="workshopIdKeyColumn" prefWidth="75.0" text="№ цеха" />
+                                    <TableColumn fx:id="productCostColumn" prefWidth="190.0" text="стоимость продукции (руб.)" />
+                                 </columns>
+                              </TableView>
+                           </center>
+                           <bottom>
+                              <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                 <buttons>
+                                    <Button mnemonicParsing="false" text="Добавить" onAction="#onAddClick"/>
+                                    <Button layoutX="537.0" layoutY="17.0" mnemonicParsing="false" onAction="#onUpdateClick" text="Изменить" />
+                                    <Button layoutX="537.0" layoutY="17.0" mnemonicParsing="false" text="Удалить" />
+                                 </buttons>
+                              </ButtonBar>
+                           </bottom>
+                        </BorderPane>
+                     </center>
+                  </BorderPane>
+               </content>
+            </Tab>
+            <Tab onSelectionChanged="#onContractTabClick" text="Договоры">
+               <content>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                     <center>
+                        <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <center>
+                              <TableView fx:id="contractTable" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                 <columns>
+                                    <TableColumn fx:id="contractNumbColumn" prefWidth="75.0" text="№ договора" />
+                                    <TableColumn fx:id="contractNameColumn" prefWidth="132.0" text="Название заказчика" />
+                                    <TableColumn fx:id="contractAddressColumn" prefWidth="130.0" text="Адрес заказчика" />
+                                    <TableColumn fx:id="contractCreatingDateColumn" prefWidth="116.0" text="дата оформления" />
+                                    <TableColumn fx:id="contractDateFinishColumn" prefWidth="116.0" text="Дата выполнения" />
+                                 </columns>
+                              </TableView>
+                           </center>
+                           <bottom>
+                              <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                 <buttons>
+                                    <Button mnemonicParsing="false" text="Добавить" onAction="#onAddClick" />
+                                    <Button layoutX="537.0" layoutY="17.0" mnemonicParsing="false" onAction="#onUpdateClick" text="Изменить" />
+                                    <Button layoutX="537.0" layoutY="17.0" mnemonicParsing="false" text="Удалить" />
+                                 </buttons>
+                              </ButtonBar>
+                           </bottom>
+                        </BorderPane>
+                     </center>
+                  </BorderPane>
+               </content>
+            </Tab>
+            <Tab fx:id="contractCountColumn" onSelectionChanged="#onOrderTabClick" text="Заказы">
+               <content>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                     <center>
+                        <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <center>
+                              <TableView fx:id="orderTable" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                 <columns>
+                                    <TableColumn fx:id="contractNumbKeyColumn" prefWidth="90.0" text="№ договора" />
+                                    <TableColumn fx:id="productKeyCodeColumn" prefWidth="116.0" text="Код продукции" />
+                                    <TableColumn fx:id="productCountColumn" prefWidth="170.0" text="Количество продукции" />
+                                 </columns>
+                              </TableView>
+                           </center>
+                           <bottom>
+                              <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                 <buttons>
+                                    <Button mnemonicParsing="false" text="Добавить" onAction="#onAddClick" />
+                                    <Button layoutX="537.0" layoutY="17.0" mnemonicParsing="false" text="Изменить" onAction="#onUpdateClick"  />
+                                    <Button layoutX="537.0" layoutY="17.0" mnemonicParsing="false" text="Удалить" />
+                                 </buttons>
+                              </ButtonBar>
+                           </bottom>
+                        </BorderPane>
+                     </center>
+                  </BorderPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+</BorderPane>
