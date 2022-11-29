@@ -4,9 +4,9 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.shape.Rectangle?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vic8.controllers.ProductUpdateController">
+<AnchorPane prefHeight="407.0" prefWidth="490.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vic8.controllers.ProductUpdateController">
    <TextField fx:id="productId" editable="false" layoutX="218.0" layoutY="44.0" />
    <TextField fx:id="productName" layoutX="220.0" layoutY="153.0" />
    <TextField fx:id="workshopNumber" layoutX="220.0" layoutY="217.0" />
@@ -14,13 +14,10 @@
    <Button layoutX="273.0" layoutY="335.0" mnemonicParsing="false" onAction="#onUpdateClick" text="Update" />
    <Label layoutX="294.0" layoutY="20.0" text="ID" />
    <Label layoutX="259.0" layoutY="136.0" text="Name Product" />
-   <Label layoutX="250.0" layoutY="259.0" text="Number Workshop" />
-   <Label layoutX="285.0" layoutY="192.0" text="Cost" />
-   <Label layoutX="23.0" layoutY="28.0" text="PRODUCT" textAlignment="CENTER">
-      <font>
-         <Font name="System Bold Italic" size="24.0" />
-      </font>
-   </Label>
+   <Label layoutX="246.0" layoutY="195.0" text="Number Workshop" />
+   <Label layoutX="281.0" layoutY="259.0" text="Cost" />
    <TextField fx:id="productCode" layoutX="220.0" layoutY="104.0" />
    <Label layoutX="281.0" layoutY="81.0" text="Numb" />
+   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8080f1" height="410.0" layoutX="-23.0" layoutY="-3.0" stroke="BLACK" strokeType="INSIDE" width="140.0" />
+   <Button layoutX="357.0" layoutY="368.0" mnemonicParsing="false" onAction="#onBackMainForm" prefHeight="26.0" prefWidth="107.0" text="Back" textFill="#010008" />
 </AnchorPane>

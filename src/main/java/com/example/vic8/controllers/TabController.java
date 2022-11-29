@@ -146,40 +146,82 @@ public class TabController implements Initializable {
     }
     private void addWorkshop() throws IOException{
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("WorkshopAddView.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 520, 440);
+        Scene scene = new Scene(fxmlLoader.load(), 490, 407);
         Stage stage = new Stage();
         HelloApplication.mainStage.setScene(scene);
         HelloApplication.mainStage.show();
     }
     private void addProduct() throws IOException{
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("productAddView.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 520, 440);
+        Scene scene = new Scene(fxmlLoader.load(), 490, 407);
         Stage stage = new Stage();
         HelloApplication.mainStage.setScene(scene);
         HelloApplication.mainStage.show();
     }
     private void addContract() throws IOException{
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("contractAddView.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 520, 440);
+        Scene scene = new Scene(fxmlLoader.load(), 490, 407);
         Stage stage = new Stage();
         HelloApplication.mainStage.setScene(scene);
         HelloApplication.mainStage.show();
     }
     private void addOrder() throws IOException{
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("orderAddView.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 520, 440);
+        Scene scene = new Scene(fxmlLoader.load(), 490, 407);
         Stage stage = new Stage();
         HelloApplication.mainStage.setScene(scene);
         HelloApplication.mainStage.show();
     }
 
     @FXML
-     void onDeleteClick(ActionEvent event) {
+    void onDeleteClick(ActionEvent event) throws IOException{
+        switch (currentTab){
+            case "Цех":
+                deleteWorkshop();
+                break;
+            case "Продукция":
+                deleteProduct();
+                break;
+            case "Договоры":
+                deleteContract();
+                break;
+            case "Заказы":
+                deleteOrder();
+                break;
+        }
+    }
+
+    @FXML
+     void deleteWorkshop() {
         Workshop workshop = workshopTable.getSelectionModel().getSelectedItem();
         WorkshopRepository.deleteWorkshopById(workshop.getId());
         workshops.removeIf(w-> w.getId() == workshop.getId());
         System.out.println(workshop);
     }
+
+    @FXML
+    void deleteProduct() {
+        Product product = productTable.getSelectionModel().getSelectedItem();
+        ProductRepository.deleteProductById(product.getId());
+        products.removeIf(p->p.getId() == product.getId());
+        System.out.println(product);
+    }
+
+    @FXML
+    void deleteContract() {
+        Contract contract = contractTable.getSelectionModel().getSelectedItem();
+        ContractRepository.deleteContractById(contract.getId());
+        contracts.removeIf(c->c.getId() == contract.getId());
+        System.out.println(contract);
+    }
+    @FXML
+    void deleteOrder() {
+        Order order = orderTable.getSelectionModel().getSelectedItem();
+        OrderRepository.deleteOrderById(order.getId());
+        orders.removeIf(o->o.getId() == order.getId());
+        System.out.println(order);
+    }
+
     @FXML
     void onUpdateClick(ActionEvent event) throws IOException {
         switch (currentTab){
@@ -203,7 +245,7 @@ public class TabController implements Initializable {
         Bus.workshop = workshops.stream().filter(w->w.getId() == workshop.getId()).findFirst().orElse(null);
 
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("updateView.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 520, 440);
+        Scene scene = new Scene(fxmlLoader.load(), 490, 407);
         Stage stage = new Stage();
         HelloApplication.mainStage.setScene(scene);
         HelloApplication.mainStage.show();
@@ -213,7 +255,7 @@ public class TabController implements Initializable {
         Bus.product = products.stream().filter(p->p.getId() == product.getId()).findFirst().orElse(null);
 
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("productUpdateView.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 520, 440);
+        Scene scene = new Scene(fxmlLoader.load(), 490, 407);
         Stage stage = new Stage();
         HelloApplication.mainStage.setScene(scene);
         HelloApplication.mainStage.show();
@@ -224,7 +266,7 @@ public class TabController implements Initializable {
         Bus.contract = contracts.stream().filter(c->c.getId() == contract.getId()).findFirst().orElse(null);
 
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("contractUpdateView.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 520, 440);
+        Scene scene = new Scene(fxmlLoader.load(), 490, 407);
         Stage stage = new Stage();
         HelloApplication.mainStage.setScene(scene);
         HelloApplication.mainStage.show();
@@ -235,7 +277,7 @@ public class TabController implements Initializable {
         Bus.order = orders.stream().filter(o->o.getId() == order.getId()).findFirst().orElse(null);
         System.out.println("окно добавление заказов");
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("orderUpdateView.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 520, 440);
+        Scene scene = new Scene(fxmlLoader.load(), 490, 407);
         Stage stage = new Stage();
         HelloApplication.mainStage.setScene(scene);
         HelloApplication.mainStage.show();

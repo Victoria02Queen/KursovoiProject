@@ -35,19 +35,25 @@ public class ProductAddController {
         product.setCost(Integer.parseInt(productCostColumn.getText()));
         product.setWorkshop_id(Integer.parseInt(workshopIdColumn.getText()));
         product.setCode(Integer.parseInt(productCodeColumn.getText()));
-
         try {
             ProductRepository.addProduct(product);
         } catch (Exception e){
-            Alert alert = new Alert(Alert.AlertType.WARNING, "Такого цеха не существует " , ButtonType.OK);
+            Alert alert = new Alert(Alert.AlertType.WARNING, "Такого цеха не существует" , ButtonType.OK);
             alert.showAndWait();
             return;
         }
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("mainForm.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 520, 440);
+        Scene scene = new Scene(fxmlLoader.load(), 600, 400);
         Stage stage = new Stage();
         HelloApplication.mainStage.setScene(scene);
         HelloApplication.mainStage.show();
     }
-
+    @FXML
+    void onBackMainForm(ActionEvent event) throws IOException{
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("mainForm.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 600, 400);
+        Stage stage = new Stage();
+        HelloApplication.mainStage.setScene(scene);
+        HelloApplication.mainStage.show();
+    }
 }

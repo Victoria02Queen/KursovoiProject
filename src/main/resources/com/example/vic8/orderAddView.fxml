@@ -4,8 +4,11 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vic8.controllers.OrderAddController">
+<AnchorPane prefHeight="407.0" prefWidth="490.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vic8.controllers.OrderAddController">
    <children>
       <TextField fx:id="productIdKeyColumn" layoutX="153.0" layoutY="96.0" />
       <TextField fx:id="contractIdKeyColumn" layoutX="153.0" layoutY="164.0" />
@@ -14,5 +17,33 @@
       <Label layoutX="166.0" layoutY="139.0" text="cont_id" />
       <Label layoutX="166.0" layoutY="200.0" text="product_count" />
       <Button layoutX="196.0" layoutY="275.0" mnemonicParsing="false" onAction="#onAddClick" text="Add" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8080f1" height="410.0" layoutX="-23.0" layoutY="-3.0" stroke="BLACK" strokeType="INSIDE" width="140.0" />
+      <Text fill="#f5f4f4" layoutX="43.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="O" wrappingWidth="16.5087890625">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <Text fill="#f8f4f4" layoutX="43.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="R">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <Text fill="#eeeaea" layoutX="43.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="D">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <Text fill="#f2f2f2" layoutX="43.0" layoutY="301.0" strokeType="OUTSIDE" strokeWidth="0.0" text="R">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <Text fill="#f5f4f4" layoutX="44.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
    </children>
+   <Button layoutX="357.0" layoutY="368.0" mnemonicParsing="false" onAction="#onBackMainForm" prefHeight="26.0" prefWidth="107.0" text="Back" textFill="#010008" />
+
 </AnchorPane>

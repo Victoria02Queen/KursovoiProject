@@ -9,9 +9,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -51,14 +49,26 @@ public class ProductUpdateController implements Initializable {
         product.setCode(Integer.parseInt(productCode.getText()));
         product.setCost(Integer.parseInt(productCost.getText()));
         product.setWorkshop_id(Integer.parseInt(workshopNumber.getText()));
-
-        ProductRepository.updateProduct(product);
+        try {
+            ProductRepository.updateProduct(product);
+        } catch (Exception e){
+            Alert alert = new Alert(Alert.AlertType.WARNING, "Такого цеха не существует" , ButtonType.OK);
+            alert.showAndWait();
+            return;
+        }
 
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("mainForm.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 520, 440);
+        Scene scene = new Scene(fxmlLoader.load(), 600, 400);
         Stage stage = new Stage();
         HelloApplication.mainStage.setScene(scene);
         HelloApplication.mainStage.show();
     }
-
+    @FXML
+    void onBackMainForm(ActionEvent event) throws IOException{
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("mainForm.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 600, 400);
+        Stage stage = new Stage();
+        HelloApplication.mainStage.setScene(scene);
+        HelloApplication.mainStage.show();
+    }
 }

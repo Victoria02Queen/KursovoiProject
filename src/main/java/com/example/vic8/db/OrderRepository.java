@@ -55,7 +55,7 @@ public class OrderRepository {
     public static void deleteOrderById(int id){
         try{
             Statement statement = connection.createStatement();
-            String sql = "DELETE FROM order WHERE id = " + id;
+            String sql = "DELETE FROM orders WHERE id = " + id;
             statement.execute(sql);
         }catch (SQLException e) {
             throw new RuntimeException(e);

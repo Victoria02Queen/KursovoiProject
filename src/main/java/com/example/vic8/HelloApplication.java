@@ -18,7 +18,7 @@ public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException, SQLException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("reg.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 520, 440);
+        Scene scene = new Scene(fxmlLoader.load(), 347, 310);
         mainStage = stage;
         stage.setScene(scene);
         stage.show();

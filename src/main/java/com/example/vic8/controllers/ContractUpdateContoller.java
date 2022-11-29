@@ -61,10 +61,17 @@ public class ContractUpdateContoller implements Initializable {
         ContractRepository.updateContract(contract);
 
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("mainForm.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 520, 440);
+        Scene scene = new Scene(fxmlLoader.load(), 600, 400);
         Stage stage = new Stage();
         HelloApplication.mainStage.setScene(scene);
         HelloApplication.mainStage.show();
     }
-
+    @FXML
+    void onBackMainForm(ActionEvent event) throws IOException{
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("mainForm.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 600, 400);
+        Stage stage = new Stage();
+        HelloApplication.mainStage.setScene(scene);
+        HelloApplication.mainStage.show();
+    }
 }

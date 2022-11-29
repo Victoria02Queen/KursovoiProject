@@ -4,8 +4,9 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vic8.controllers.OrderUpdateController">
+<AnchorPane prefHeight="407.0" prefWidth="490.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vic8.controllers.OrderUpdateController">
    <children>
       <TextField fx:id="orderIdColumn" layoutX="187.0" layoutY="80.0" />
       <TextField fx:id="contractIdColumn" layoutX="187.0" layoutY="188.0" />
@@ -16,5 +17,8 @@
       <Label layoutX="218.0" layoutY="229.0" text="product_count" />
       <TextField fx:id="productIdColumn" layoutX="187.0" layoutY="134.0" />
       <Button layoutX="240.0" layoutY="303.0" mnemonicParsing="false" onAction="#onUpdateClick" text="update" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8080f1" height="410.0" layoutX="-23.0" layoutY="-3.0" stroke="BLACK" strokeType="INSIDE" width="140.0" />
    </children>
+   <Button layoutX="357.0" layoutY="368.0" mnemonicParsing="false" onAction="#onBackMainForm" prefHeight="26.0" prefWidth="107.0" text="Back" textFill="#010008" />
+
 </AnchorPane>

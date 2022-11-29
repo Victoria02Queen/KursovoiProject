@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vic8.controllers.WorkshopUpdateController">
    <children>
@@ -18,5 +19,7 @@
       <Label layoutX="264.0" layoutY="134.0" text="Name" />
       <Label layoutX="262.0" layoutY="199.0" text="Chief" />
       <Label layoutX="262.0" layoutY="262.0" text="Phone" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8080f1" height="410.0" layoutX="-26.0" layoutY="-3.0" stroke="BLACK" strokeType="INSIDE" width="140.0" />
+      <Button layoutX="357.0" layoutY="368.0" mnemonicParsing="false" onAction="#onBackMainForm" prefHeight="26.0" prefWidth="107.0" text="Back" textFill="#010008" />
    </children>
 </AnchorPane>

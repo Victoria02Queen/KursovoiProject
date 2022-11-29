@@ -30,9 +30,9 @@
                            <bottom>
                               <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                                 <buttons>
-                                  <Button fx:id="btn1" mnemonicParsing="false" text="Добавить" onAction="#onAddClick" />
-                                    <Button fx:id="btn2" layoutX="537.0" layoutY="17.0" mnemonicParsing="false" onAction="#onUpdateClick" text="Изменить" />
-                                    <Button fx:id="btn3" layoutX="537.0" layoutY="17.0" mnemonicParsing="false" onAction="#onDeleteClick" text="Удалить" />
+                                  <Button fx:id="btn1" mnemonicParsing="false" onAction="#onAddClick" text="Add" />
+                                    <Button fx:id="btn2" layoutX="537.0" layoutY="17.0" mnemonicParsing="false" onAction="#onUpdateClick" text="Update" />
+                                    <Button fx:id="btn3" layoutX="537.0" layoutY="17.0" mnemonicParsing="false" onAction="#onDeleteClick" text="Delete" />
                                 </buttons>
                               </ButtonBar>
                            </bottom>
@@ -59,9 +59,9 @@
                            <bottom>
                               <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                                  <buttons>
-                                    <Button mnemonicParsing="false" text="Добавить" onAction="#onAddClick"/>
-                                    <Button layoutX="537.0" layoutY="17.0" mnemonicParsing="false" onAction="#onUpdateClick" text="Изменить" />
-                                    <Button layoutX="537.0" layoutY="17.0" mnemonicParsing="false" text="Удалить" />
+                                    <Button mnemonicParsing="false" onAction="#onAddClick" text="Add" />
+                                    <Button layoutX="537.0" layoutY="17.0" mnemonicParsing="false" onAction="#onUpdateClick" text="Update" />
+                                    <Button layoutX="537.0" layoutY="17.0" mnemonicParsing="false" onAction="#onDeleteClick" text="Delete" />
                                  </buttons>
                               </ButtonBar>
                            </bottom>
@@ -89,9 +89,9 @@
                            <bottom>
                               <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                                  <buttons>
-                                    <Button mnemonicParsing="false" text="Добавить" onAction="#onAddClick" />
-                                    <Button layoutX="537.0" layoutY="17.0" mnemonicParsing="false" onAction="#onUpdateClick" text="Изменить" />
-                                    <Button layoutX="537.0" layoutY="17.0" mnemonicParsing="false" text="Удалить" />
+                                    <Button mnemonicParsing="false" onAction="#onAddClick" text="Add" />
+                                    <Button layoutX="537.0" layoutY="17.0" mnemonicParsing="false" onAction="#onUpdateClick" text="Update" />
+                                    <Button layoutX="537.0" layoutY="17.0" mnemonicParsing="false" onAction="#onDeleteClick" text="Delete" />
                                  </buttons>
                               </ButtonBar>
                            </bottom>
@@ -117,9 +117,9 @@
                            <bottom>
                               <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                                  <buttons>
-                                    <Button mnemonicParsing="false" text="Добавить" onAction="#onAddClick" />
-                                    <Button layoutX="537.0" layoutY="17.0" mnemonicParsing="false" text="Изменить" onAction="#onUpdateClick"  />
-                                    <Button layoutX="537.0" layoutY="17.0" mnemonicParsing="false" text="Удалить" />
+                                    <Button mnemonicParsing="false" onAction="#onAddClick" text="Add" />
+                                    <Button layoutX="537.0" layoutY="17.0" mnemonicParsing="false" onAction="#onUpdateClick" text="Update" />
+                                    <Button layoutX="537.0" layoutY="17.0" mnemonicParsing="false" onAction="#onDeleteClick" text="Delete" />
                                  </buttons>
                               </ButtonBar>
                            </bottom>

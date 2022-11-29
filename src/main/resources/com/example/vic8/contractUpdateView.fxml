@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vic8.controllers.ContractUpdateContoller">
+<AnchorPane prefHeight="407.0" prefWidth="490.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vic8.controllers.ContractUpdateContoller">
       <TextField fx:id="contractId" editable="false" layoutX="205.0" layoutY="42.0" />
       <TextField fx:id="contractNumber" layoutX="205.0" layoutY="92.0" />
       <TextField fx:id="contractCustomerAddress" layoutX="205.0" layoutY="194.0" />
@@ -19,5 +21,9 @@
       <Label layoutX="257.0" layoutY="283.0" text="Date finish" />
       <Label layoutX="247.0" layoutY="125.0" text="Customer Name" />
       <TextField fx:id="contractCustomerName" layoutX="205.0" layoutY="149.0" />
-   
+   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8080f1" height="410.0" layoutX="-26.0" layoutY="-3.0" stroke="BLACK" strokeType="INSIDE" width="140.0" />
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+    <Button layoutX="357.0" layoutY="368.0" mnemonicParsing="false" onAction="#onBackMainForm" prefHeight="26.0" prefWidth="107.0" text="Back" textFill="#010008" />
 </AnchorPane>
